@@ -1,0 +1,112 @@
+body {
+    background-color: #6B3F2A;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita rolagem indesejada */
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    width: 1000px; /* Ajuste para que o conteúdo ocupe 100% da tela */
+    box-sizing: border-box;
+}
+
+/* Estilo do título */
+h1 {
+    color: #ca4d6c;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Estilo do coração */
+.heart {
+    font-size: 50px;
+    color: #ff3366;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.heart:hover {
+    transform: scale(1.2);
+}
+
+/* Ajustes para o botão "Não" */
+#nao {
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #440909;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    transition: transform 0.3s;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.text-content {
+    max-width: 400px;
+    padding: 10px;
+    text-align: left;
+}
+
+.image-content {
+    width: 100px;
+    height: 100px;
+    background-image: url('ryanbruna.png'); /* Adicione o caminho correto para sua imagem */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; /* Adiciona um pequeno preenchimento */
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .image-content {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #nao {
+        font-size: 20px;
+        position: relative; /* Ajuste para o botão não sair da tela */
+        margin-top: 20px;
+    }
+}
+
+/* Para botões que ficam fora da tela no mobile */
+@media (max-width: 400px) {
+    #nao {
+        font-size: 18px;
+    }
+}
